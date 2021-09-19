@@ -8,8 +8,9 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-    
     <link rel="stylesheet" href="diseño.css">
+
+    <script src="javascript.js"></script>
 
     
 </head>
@@ -18,76 +19,87 @@
 
     <form class="calc">
            
-         <div class="screen">
-            <input type="text" class="screen-numbers" name="numbers" id="operation">
+         <div class="pantalla">
+            <input type="text" class="pantallaOperar" name="numbers" id="operation">
         </div>
+      
     <br>
         <h3>Cientifica</h3>
-        <div>
-            <td><button class="botonDiseño" onclick="add('(')">(</button></td>
-            <td><button class="botonDiseño" onclick="add(')')">)</button></td>
-            <td><button class="botonDiseño" onclick="add('sin')">sin</button></td>
-            <td><button class="botonDiseño" onclick="add('cos')">cos</button></td>
-            <td><button class="botonDiseño" onclick="add('tan')">tan</button></td>
-            <td><button class="botonDiseño" onclick="add('raiz')">√</button></td>
+        <div class="btn-group">
+            <input type="button" value="(" class="botonDiseño" onclick="numbers.value += '('">
+            <input type="button" value=")" class="botonDiseño" onclick="numbers.value += ')'">
+            <input type="button" value="sin" class="botonDiseño" onclick="numbers.value += 'sin('">
+            <input type="button" value="cos" class="botonDiseño" onclick="numbers.value += 'cos('">
+            <input type="button" value="tan" class="botonDiseño" onclick="numbers.value += 'tan('">
+            <input type="button" value="√" class="botonDiseño" onclick="numbers.value += 'raiz('">
         </div>
-        <div>
-            <td><button class="botonDiseño" onclick="add('pow')">^</button></td>
-            <td><button class="botonDiseño" onclick="add('espacio1')"> , </button></td>
-            <td><button class="botonDiseño" onclick="add('prc')">%</button></td>
-            <td><button class="botonDiseño" onclick="add('espacio2')"> . </button></td>
-            <td><button class="botonDiseño" onclick="add('log')">log</button></td>
-            <td><button class="botonDiseño" onclick="add('espacio3')"> . </button></td>
+        <div class="btn-group">
+            <input type="button" value="^" class="botonDiseño" onclick="numbers.value += 'pow('">
+            <td><button class="botonDiseño" onclick="add('espacio1')"> &nbsp; </button></td>
+            <input type="button" value="%" class="botonDiseño" onclick="numbers.value += 'prc('">
+            <td><button class="botonDiseño" onclick="add('espacio2')"> &nbsp; </button></td>
+            <input type="button" value="log" class="botonDiseño" onclick="numbers.value += 'log('">
+            <td><button class="botonDiseño" onclick="add('espacio3')"> &nbsp; </button></td>
         </div>
     </br>
         <tr>
             <td>
+                <br>
+                <br>
+                <br>
                 <h3>Básica</h3>
             </td>
         
         </tr>
      
-      <div>
-
-        <td><button class="botonDiseño" onclick="add('7')">7</button></td>
-        <td><button class="botonDiseño" onclick="add('8')">8</button></td>
-        <td><button class="botonDiseño" onclick="add('9')">9</button></td>
-        <td colspan="1"><button class= "botonDel" onclick="del()" class="del">DEL</button></td>
-        <td colspan="1"><button class="botonAC"onclick="erase_num()" class="ac">AC</button></td>
-
-      </div>
-
-      <div>
-
-        <td><button class="botonDiseño" onclick="add('4')">4</button></td>
-        <td><button class="botonDiseño" onclick="add('5')">5</button></td>
-        <td><button class="botonDiseño" onclick="add('6')">6</button></td>
-        <td><button class="botonDiseño" onclick="add('±')">±</button></td>
-        <td><button class="botonDiseño" onclick="add('+')">+</button></td>
-        <td><button class="botonDiseño" onclick="add('-')">-</button></td>
-
+      <div class="btn-group">
+        <input type="button" value="7" class="botonDiseño" onclick="numbers.value += '7'">
+        <input type="button" value="8" class="botonDiseño" onclick="numbers.value += '8'">
+        <input type="button" value="9" class="botonDiseño" onclick="numbers.value += '9'">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <input type="button" value="DEL" class="botonDel" onclick="push('C')">
+        <input type="button" value="AC" class="botonAC" onclick="erase_num()">
 
       </div>
-      <div>
 
-        <td><button class="botonDiseño" onclick="add('1')">1</button></td>
-        <td><button class="botonDiseño" onclick="add('2')">2</button></td>
-        <td><button class="botonDiseño"onclick="add('3')">3</button></td>
-        <td><button class="botonDiseño"onclick="add('*')">*</button></td>
-        <td><button class="botonDiseño"onclick="add('/')">/</button></td>
-        <td><button class="botonDiseño"onclick="add('3.141592')">π</button></td>
+      <div class="btn-group">
+
+        <input type="button" value="4" class="botonDiseño" onclick="numbers.value += '4'">
+        <input type="button" value="5" class="botonDiseño" onclick="numbers.value += '5'">
+        <input type="button" value="6" class="botonDiseño" onclick="numbers.value += '6'">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <input type="button" value="±" class="botonDiseño" onclick="numbers.value += '±'">
+        <input type="button" value="+" class="botonDiseño" onclick="numbers.value += '+'">
+        <input type="button" value="-" class="botonDiseño" onclick="numbers.value += '-'">  
+
+
+      </div>
+      <div class="btn-group">
+        <input type="button" value="1" class="botonDiseño" onclick="numbers.value += '1'">
+        <input type="button" value="2" class="botonDiseño" onclick="numbers.value += '2'">
+        <input type="button" value="3" class="botonDiseño" onclick="numbers.value += '3'">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p> 
+        <input type="button" value="*" class="botonDiseño" onclick="numbers.value += '*'">
+        <input type="button" value="/" class="botonDiseño" onclick="numbers.value += '/'">
+        <input type="button" value="π" class="botonDiseño" onclick="numbers.value += '3.141592'">
+    
         
       </div>
-      <div>
+      <div class="btn-group">
+        
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <input type="button" value="0" class="botonDiseño" onclick="numbers.value += '0'">
+        <input type="button" value="." class="botonDiseño" onclick="numbers.value += '.'">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <input type="button" value="=" class="igualCalc" onclick="push('=')">
+        
 
-        <td><button class="botonDiseño" onclick="add('0')">0</button></td>
-        <td><button class="botonDiseño" onclick="add('.')">.</button></td>
-
-
+        </div>
+        
       </div>
-
 
     </form>
 
+    
 </body>
 </html>
