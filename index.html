@@ -6,78 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora basica, cientifica - Bryan Martinez</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="diseño.css">
+
     
 </head>
 <body>
-    <table>
+    
 
-    <h3>Cientifica</h3>
-    <tr>
-        <td><button onclick="add('(')">(</button></td>
-        <td><button onclick="add(')')">)</button></td>
-        <td><button onclick="add('sin')">sin</button></td>
-        <td><button onclick="add('cos')">cos</button></td>
-        <td><button onclick="add('tan')">tan</button></td>
-        <td><button onclick="add('raiz')">√</button></td>
-    </tr>
-    <tr>
-        <td><button onclick="add('pow')">^</button></td>
-        <td><button onclick="add('espacio1')">  </button></td>
-        <td><button onclick="add('prc')">%</button></td>
-        <td><button onclick="add('espacio2')">  </button></td>
-        <td><button onclick="add('log')">log</button></td>
-        <td><button onclick="add('espacio3')">  </button></td>
-    </tr>
+    <form class="calc">
+           
+         <div class="screen">
+            <input type="text" class="screen-numbers" name="numbers" id="operation">
+        </div>
+    <br>
+        <h3>Cientifica</h3>
+        <div>
+            <td><button class="botonDiseño" onclick="add('(')">(</button></td>
+            <td><button class="botonDiseño" onclick="add(')')">)</button></td>
+            <td><button class="botonDiseño" onclick="add('sin')">sin</button></td>
+            <td><button class="botonDiseño" onclick="add('cos')">cos</button></td>
+            <td><button class="botonDiseño" onclick="add('tan')">tan</button></td>
+            <td><button class="botonDiseño" onclick="add('raiz')">√</button></td>
+        </div>
+        <div>
+            <td><button class="botonDiseño" onclick="add('pow')">^</button></td>
+            <td><button class="botonDiseño" onclick="add('espacio1')"> , </button></td>
+            <td><button class="botonDiseño" onclick="add('prc')">%</button></td>
+            <td><button class="botonDiseño" onclick="add('espacio2')"> . </button></td>
+            <td><button class="botonDiseño" onclick="add('log')">log</button></td>
+            <td><button class="botonDiseño" onclick="add('espacio3')"> . </button></td>
+        </div>
+    </br>
         <tr>
             <td>
-                <h3>Basica</h3>
+                <h3>Básica</h3>
             </td>
         
         </tr>
      
-      <tr>
+      <div>
 
-        <td><button onclick="add('7')">7</button></td>
-        <td><button onclick="add('8')">8</button></td>
-        <td><button onclick="add('9')">9</button></td>
-        <td colspan="1"><button onclick="del()" class="del">DEL</button></td>
-        <td colspan="1"><button onclick="erase_num()" class="ac">AC</button></td>
+        <td><button class="botonDiseño" onclick="add('7')">7</button></td>
+        <td><button class="botonDiseño" onclick="add('8')">8</button></td>
+        <td><button class="botonDiseño" onclick="add('9')">9</button></td>
+        <td colspan="1"><button class= "botonDel" onclick="del()" class="del">DEL</button></td>
+        <td colspan="1"><button class="botonAC"onclick="erase_num()" class="ac">AC</button></td>
 
-      </tr>
+      </div>
 
-      <tr>
+      <div>
 
-        <td><button onclick="add('4')">4</button></td>
-        <td><button onclick="add('5')">5</button></td>
-        <td><button onclick="add('6')">6</button></td>
-        <td><button onclick="add('±')">±</button></td>
-        <td><button onclick="add('+')">+</button></td>
-        <td><button onclick="add('-')">-</button></td>
+        <td><button class="botonDiseño" onclick="add('4')">4</button></td>
+        <td><button class="botonDiseño" onclick="add('5')">5</button></td>
+        <td><button class="botonDiseño" onclick="add('6')">6</button></td>
+        <td><button class="botonDiseño" onclick="add('±')">±</button></td>
+        <td><button class="botonDiseño" onclick="add('+')">+</button></td>
+        <td><button class="botonDiseño" onclick="add('-')">-</button></td>
 
 
-      </tr>
-      <tr>
+      </div>
+      <div>
 
-        <td><button onclick="add('1')">1</button></td>
-        <td><button onclick="add('2')">2</button></td>
-        <td><button onclick="add('3')">3</button></td>
-        <td><button onclick="add('*')">*</button></td>
-        <td><button onclick="add('/')">/</button></td>
-        <td><button onclick="add('3.141592')">π</button></td>
+        <td><button class="botonDiseño" onclick="add('1')">1</button></td>
+        <td><button class="botonDiseño" onclick="add('2')">2</button></td>
+        <td><button class="botonDiseño"onclick="add('3')">3</button></td>
+        <td><button class="botonDiseño"onclick="add('*')">*</button></td>
+        <td><button class="botonDiseño"onclick="add('/')">/</button></td>
+        <td><button class="botonDiseño"onclick="add('3.141592')">π</button></td>
         
-      </tr>
-      <tr>
+      </div>
+      <div>
 
-        <td><button onclick="add('0')">0</button></td>
-        <td><button onclick="add('.')">.</button></td>
-        <td></td>
-        <td></td>
-        <td><button onclick="add('=')">=</button></td>
+        <td><button class="botonDiseño" onclick="add('0')">0</button></td>
+        <td><button class="botonDiseño" onclick="add('.')">.</button></td>
 
 
-      </tr>
+      </div>
 
-    </table>
+
+    </form>
 
 </body>
 </html>

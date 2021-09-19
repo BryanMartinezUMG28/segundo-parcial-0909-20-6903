@@ -1,0 +1,65 @@
+body{
+    padding: 20px;
+    margin: 0;
+    background-color: #000000;
+}
+.calc{
+    width:30%;
+    background-color: #696969 ;
+    display: block;
+    margin: 0 auto;
+    padding: 30px;
+    width: 40%;
+    height: 98%;
+    
+
+}
+
+.botonDiseño{
+    
+    background: transparent;
+    border: 2px solid rgb(255, 98, 182);
+    color: rgb(255, 246, 250);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.igualCalc{
+    padding: 5px;
+    color: rgb(255, 246, 250);
+    background: transparent;
+    border: 2px solid rgb(255, 98, 182);
+    border-radius: 5px;
+    width: 140px;
+    height: 50px;
+    margin: 20px;
+   
+}
+
+.botonDel{
+    padding: 5px;
+    color: rgb(255, 246, 250);
+    background: #ff1493;
+    border: #ff1493;
+    border-radius: 3px;
+    width: 120px;
+    height: 60px;
+    margin: 3px;
+}
+
+.botonAC{
+    padding: 5px;
+    color: rgb(255, 246, 250);
+    background: transparent;
+    border: 2px solid rgb(255, 98, 182);
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    margin: 3px;
+}
+
+
+
